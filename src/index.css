@@ -1,0 +1,260 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+ 
+ 
+ 
+ *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.navbar{
+  display: flex;
+justify-content: space-between;
+background-color: black;
+color: white;
+
+
+
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+
+
+ 
+
+  }
+
+
+  ul{
+    list-style-type: none;
+    font-weight: bold;  
+
+    
+  }
+
+
+  .nav-item a{
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+
+.nav-item a:hover{
+  opacity: 0.5;
+}
+
+
+.preshop img {
+  width: 80vh;
+  height: 80vh;
+  border-radius: 30px;
+ }
+
+
+ .preshop{
+  display: flex;
+  justify-content: space-around;
+  margin:15px;
+ 
+  align-items: center;
+
+}
+
+
+.tagline{
+  font-weight: bolder;
+  font-size:50px ;
+ }
+
+
+ .prebutton{
+  border-radius: 10px;
+  margin: auto;
+  padding: 15px;
+  width:30vh;
+  font-weight: bolder;
+  background-color: black;
+  color:whitesmoke;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.prebutton a{
+text-decoration: none;
+color: whitesmoke;
+
+}
+.prebutton:hover{
+opacity: 0.7;
+}
+
+
+
+.card img{
+  width: 100%;
+  height:auto;
+}
+.card{
+ margin-top: 20px;
+ margin-left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.card button{
+
+  border:none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  
+
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkout{
+  display: flex;
+  justify-content: center;
+ 
+ 
+   
+ }
+ 
+ .heading{
+  
+ }
+ 
+ 
+ .checkout img {
+   width: 20vh;
+   height :auto;
+   
+ }
+ 
+ .counter{
+   width: 30px;
+   height: 30px;
+   margin: 10px;
+   background-color: black;
+   color: white;
+ }
+ 
+ 
+ .aclass{
+ 
+ text-decoration: none;
+ color: black;
+ padding : 5px;
+ border-radius: 10px;
+ border: 3px solid black;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+  .pay{
+   border:none;
+   outline: 0;
+   padding: 12px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 20%;
+   font-size: 18px;
+   min-width: 400px;
+   flex-grow: 1;
+ }
+ 
+ .flexbutton{
+   display: flex;
+ }
+ 
+ .back{
+ 
+   margin-left: 120px;
+   margin-top: 15px;
+   align-items: center;
+   padding: 10px;
+ }
+ 
+ .checkcard{
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, aqua, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #03c236, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+
+
+
+ border: 2px solid black;
+   margin-top: 30px;
+   overflow: hidden;
+  width: 400px;
+  
+
+ }
+
+ .heading{
+  margin-top: 10px;
+  margin-left: 50px;
+ }
+
+
+ .precontainer{
+  background: #F0F2F0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #000000, #fcfffc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #000000, #fafffa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
