@@ -2,19 +2,21 @@ import React from 'react';
 import logo from "../images/logo.png"; 
 import Product from './Product';
 
-const Header = () => {
+
+const Header = ({size,setShow}) => {
   return (
     <header>
       <nav className="navbar">
-        <a href="/" className="logo">
+        <a href="/product" className="logo" onClick={()=>setShow(true)}   >
           <img src={logo} alt="logo" />
         </a>
 
         <ul className="nav-links">
-          <li className="nav-item"><a href="#">Home</a></li>
-          <li className="nav-item"><a href="#">Product</a></li>
-          <li className="nav-item"><a href="/checkout">Cart</a></li>
-          <i className="fa fa-shopping-cart" style={{ fontSize: "36px" }}> </i>
+          <li className="nav-item"><a href="/">Home</a></li>
+          <li className="nav-item"><a href="/product">Product</a></li>
+         
+          <div onClick={()=>setShow(false)}>
+          <i className="fa fa-shopping-cart" style={{ fontSize: "36px" }}> </i> <span>{size}</span> </div>
         </ul>
       </nav>
     </header>

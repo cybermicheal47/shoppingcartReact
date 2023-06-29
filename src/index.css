@@ -186,6 +186,15 @@ opacity: 0.7;
    color: white;
  }
  
+ .remove{
+  width: 60px;
+  height: 40px;
+  margin: 10px;
+  background-color: red;
+  color: white;
+}
+
+
  
  .aclass{
  
@@ -258,3 +267,18 @@ background: -webkit-linear-gradient(to top, #000000, #fcfffc);  /* Chrome 10-25,
 background: linear-gradient(to top, #000000, #fafffa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
  }
+
+
+ .warning{
+  height: 40px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  background-color: rgb(210, 91, 91);
+  font-size: 1.1rem;
+  color: white;
+  font-family: cursive;
+  padding: 5px;
+  border-radius: 5px;
+}
