@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import cards from './Productlist';
 
-const Checkout = ({ cart, setCart, handleChange }) => {
+const Checkout = ({ cart, setCart, handleChange , setShow}) => {
   const [price, setPrice] = useState(0);
 
   const handlePrice = ()=>{
@@ -51,7 +51,7 @@ const handleRemove = (id) =>{
           </p>
           <button className="pay">Proceed To Payment</button>
           <div className="back">
-            <a className="aclass" href="/">
+            <a className="aclass"     onClick={()=>setShow(true)}  href="/">
               Back To Shop
             </a>
           </div>

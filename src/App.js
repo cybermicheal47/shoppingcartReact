@@ -52,7 +52,7 @@ const handleChange = (card, d) =>{
       
      
 
-     {show ? <Product size={cart.length} handleclick={handleclick}  />   :  <Checkout cart={cart} setCart={setCart} handleChange={handleChange}    />}
+     {show ? <Product size={cart.length} handleclick={handleclick}  />   :  <Checkout cart={cart} setCart={setCart} handleChange={handleChange} setShow={[setShow]}   />}
       {warning && <div className="warning">Item already in cart</div>}
 	
     </>

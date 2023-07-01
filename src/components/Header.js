@@ -13,7 +13,7 @@ const Header = ({size,setShow}) => {
 
         <ul className="nav-links">
           <li className="nav-item"><a href="/">Home</a></li>
-          <li className="nav-item"><a href="/product">Product</a></li>
+          
          
           <div onClick={()=>setShow(false)}>
           <i className="fa fa-shopping-cart" style={{ fontSize: "36px" }}> </i> <span>{size}</span> </div>
