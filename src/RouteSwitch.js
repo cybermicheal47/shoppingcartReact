@@ -6,7 +6,7 @@ import Header from './components/Header'
 import Prepage from './components/Prepage'
 import Product from './components/Product'
 import Checkout from './components/Checkout'
-import Homepage from './Homepage';
+
 
 
 
@@ -14,11 +14,15 @@ import Homepage from './Homepage';
 
 const RouteSwitch = () => {
   return (
+   
+     
   <BrowserRouter>
-  <Routes>
+  <Routes> 
+  
+  <Route path="/" element={<App/>} />
+  
 
-  <Route path="/" element={<Homepage />} />
-        <Route path="/product" element={<App />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/checkout" element={<Checkout />} />
 
   </Routes>
@@ -26,6 +30,7 @@ const RouteSwitch = () => {
   
   
   </BrowserRouter>
+
   )
 }
 

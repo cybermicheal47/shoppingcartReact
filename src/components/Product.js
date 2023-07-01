@@ -7,6 +7,7 @@ const Product = ({size, handleclick}) => {
  
   return (
     <div>
+      
     
       <div className="container">
         {cards.map((card) => (
