@@ -1,11 +1,12 @@
 import React from 'react'
 import mainpic from "../images/Mainpic.jpg"
+import { Link } from 'react-router-dom';
 
 const Prepage = () => {
   return (
     <div>
 
-<div className="precontainer">
+<div className="precontainer"> </div>
 
 
 
@@ -13,16 +14,18 @@ const Prepage = () => {
 <div className="preshop">
     <img src={mainpic} alt="Mainpic" />
     <p className="tagline">Best fashion <br/> Store! <br/>
-        <button className="prebutton" onClick={()=>window.location.href='/product'}>Shop Now </button>
+    <Link to="/product">
+        <button className="prebutton">Shop Now </button></Link>
     </p>
     
    
-
+   
 
 </div>
-</div>
+
+</div> 
       
-    </div>
+    
   )
 }
 

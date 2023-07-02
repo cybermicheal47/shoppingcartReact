@@ -4,6 +4,7 @@ import Prepage from './components/Prepage';
 import Product from './components/Product';
 import Checkout from './components/Checkout';
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -18,44 +19,58 @@ const App = () => {
       }
     });
 
-    
     if (isPresent) {
       setWarning(true);
       setTimeout(() => {
         setWarning(false);
       }, 2000);
-      
+
       return;
     }
 
     setCart([...cart, item]);
   };
-console.log(warning)
 
-const handleChange = (card, d) =>{
-	let ind = -1;
-	cart.forEach((cards, index)=>{
-		if (cards.id === card.id)
-			ind = index;
-	});
-	const tempArr = cart;
-	tempArr[ind].amount += d;
-	
-	if (tempArr[ind].amount === 0)
-		tempArr[ind].amount = 1;
-	setCart([...tempArr])
-}
+  const handleChange = (card, d) => {
+    let ind = -1;
+    cart.forEach((cards, index) => {
+      if (cards.id === card.id) ind = index;
+    });
+    const tempArr = cart;
+    tempArr[ind].amount += d;
+
+    if (tempArr[ind].amount === 0) tempArr[ind].amount = 1;
+    setCart([...tempArr]);
+  };
 
   return (
-    <>
-      <Header size={cart.length} setShow={setShow} /> 
-      
-     
+    <div>
+      <Header size={cart.length} setShow={setShow} />
 
-     {show ? <Product size={cart.length} handleclick={handleclick}  />   :  <Checkout cart={cart} setCart={setCart} handleChange={handleChange} setShow={[setShow]}   />}
+      <Routes>
+        
+
+        <Route
+          path="/product"
+          element={
+            show ? (
+              <Product size={cart.length} handleclick={handleclick} />
+            ) : (
+              <Checkout
+                cart={cart}
+                setCart={setCart}
+                handleChange={handleChange}
+                setShow={setShow}
+              />
+            )
+          }
+        />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/" element={<Prepage />} />
+      </Routes>
+
       {warning && <div className="warning">Item already in cart</div>}
-	
-    </>
+    </div>
   );
 };
 

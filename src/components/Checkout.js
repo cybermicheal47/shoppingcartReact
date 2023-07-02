@@ -1,31 +1,30 @@
 import { useEffect, useState } from 'react';
 import cards from './Productlist';
+import { Link } from 'react-router-dom';
 
-const Checkout = ({ cart, setCart, handleChange , setShow}) => {
+const Checkout = ({ cart, setCart, handleChange, setShow }) => {
   const [price, setPrice] = useState(0);
 
-  const handlePrice = ()=>{
+  const handlePrice = () => {
     let ans = 0;
-    cart.map((card)=>(
-        ans += card.amount * card.price
-    ))
+    cart.map((card) => {
+      ans += card.amount * card.price;
+    });
     setPrice(ans);
-}
+  };
 
-useEffect(() =>{
-  handlePrice();
-})
+  useEffect(() => {
+    handlePrice();
+  });
 
-const handleRemove = (id) =>{
-  const remainingcards = cart.filter((card)=> card.id !== id)
-  setCart(remainingcards);
- 
-}
-
-
+  const handleRemove = (id) => {
+    const remainingcards = cart.filter((card) => card.id !== id);
+    setCart(remainingcards);
+  };
 
   return (
     <div>
+      <div className='precontainer'></div>
       <div className="checkout">
         <div className="checkcard">
           <h3 className="heading">Your Shopping Cart</h3>
@@ -36,11 +35,11 @@ const handleRemove = (id) =>{
               <p className="price">${card.price}</p>
               <p>
                 <div className="flexbutton">
-                  <button className="counter"  onClick={()=>handleChange(card, +1) }   >+</button>
+                  <button className="counter" onClick={() => handleChange(card, +1)}>+</button>
                   <h2 id="counting"></h2>
-                  <button className="counter"   onClick={()=>handleChange(card ,-1) }    >-</button>
+                  <button className="counter" onClick={() => handleChange(card, -1)}>-</button>
                   <button className='counter'>{card.amount}</button>
-                  <button className='remove' onClick={()=>handleRemove(card.id) }  >Remove</button>
+                  <button className='remove' onClick={() => handleRemove(card.id)}>Remove</button>
                 </div>
               </p>
             </div>
@@ -51,9 +50,7 @@ const handleRemove = (id) =>{
           </p>
           <button className="pay">Proceed To Payment</button>
           <div className="back">
-            <a className="aclass"     onClick={()=>setShow(true)}  href="/">
-              Back To Shop
-            </a>
+            <Link to="/product" className="aclass" onClick={() => setShow(true)}>Back To Shop</Link>
           </div>
         </div>
       </div>
